@@ -26,10 +26,9 @@
   color: white;
   border-radius: 5px;
   height:30px;
-  width: 100px;
+  width: 120px;
   text-align: center;
   padding: 10px;
-  bottom: calc(100% + 10px);
 }
 
 .tooltip:hover::before,
@@ -41,12 +40,72 @@
 .tooltip::after{
     position: absolute;
     display: none;
-    bottom: 100%; 
-    left: 50%;
+    /* bottom: 100%; 
+    left: 50%; */
     height: 0;
     width: 0;
-    border: 6px solid transparent;
-    border-top-color: rgb(0, 0, 0,0.7);
-    content: "";
+    border: 5px solid transparent;
     /* bottom:calc(100%) */
+}
+
+.tooltip.top::before{
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip.top::after{
+    border-top-color: rgb(0, 0, 0,0.7);
+    border-bottom-width: 0;
+    content: "";
+    bottom: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip.bottom::before{
+    top: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip.bottom::after{
+    border-bottom-color: rgb(0, 0, 0,0.7);
+    border-top-width: 1px;
+    content: "";
+    top: 100%; 
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.tooltip.right::before{
+    /* bottom: calc(100% + 5px); */
+    top:50%;
+    left: calc(100% + 5px);
+    transform: translateY(-50%);
+}
+
+.tooltip.right::after{
+    border-right-color: rgb(0, 0, 0,0.7);
+    border-left-width: 0;
+    content: "";
+    left: 100%;
+    top:50%;
+    transform: translateY(-50%);
+}
+
+.tooltip.left::before{
+    /* bottom: calc(100% + 5px); */
+    top:50%;
+    right: calc(100% + 5px);
+    transform: translateY(-50%);
+}
+
+.tooltip.left::after{
+    border-left-color: rgb(0, 0, 0,0.7);
+    border-right-width: 0;
+    content: "";
+    right: 100%;
+    top:50%;
+    transform: translateY(-50%);
 }
