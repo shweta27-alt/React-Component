@@ -1,0 +1,49 @@
+body{
+    padding: 0px;
+    margin:0px;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* align-items: flex-end; */
+}
+
+.toast-container{
+    background-color: blueviolet;
+    /* height: 100px;
+    width: 300px; */
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    position: absolute;
+    top:100%;
+    left:50%;
+    /* transform: translateY(-300px);
+    transition: transform .1s ease-in-out infinite; */
+    animation: moveToRight 2s ease-in-out infinite;
+    animation-delay: 1000ms;
+    /* transition: transfor; */
+}
+
+@keyframes moveToRight {
+    0% {
+      transform: translateY(100px);
+    }
+    100% {
+      transform: translateY(-300px);
+    }
+  }
+
+
+.cross-arrow{
+    height:20px;
+    width:20px;
+    position: absolute;
+    right: 10px;
+}
+
+.title-cross-container{
+    display: flex;
+    flex-direction: row;
+}

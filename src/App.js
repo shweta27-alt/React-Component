@@ -2,7 +2,8 @@ import './App.css';
 // import Accordion from './components/Accordion';
 // import Swiper from './components/Swiper';
 // import ExpandCollapse from './components/ExpandCollapse';
-import Tooltip from './components/Tooltip';
+// import Tooltip from './components/Tooltip';
+import Toast from './components/Toast'
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       {/* <Swiper/>0 */}
       {/* <Accordion/> */}
       {/* <ExpandCollapse/> */}
-      <Tooltip/>
+      {/* <Tooltip/> */}
+      <Toast/>
     </div>
   );
 }
